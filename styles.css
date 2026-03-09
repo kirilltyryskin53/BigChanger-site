@@ -1,0 +1,253 @@
+/* ===== базовый сброс ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0f12;
+color:#ffffff;
+line-height:1.6;
+}
+
+/* ===== общий контейнер ===== */
+
+.site-shell{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+/* ===== HEADER ===== */
+
+.site-header{
+background:#0f151a;
+border-bottom:1px solid #1d262e;
+}
+
+.header-inner{
+max-width:1200px;
+margin:auto;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* логотип */
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+color:white;
+}
+
+.brand-mark img{
+width:38px;
+height:38px;
+object-fit:contain;
+}
+
+.brand-text{
+font-size:20px;
+font-weight:600;
+letter-spacing:1px;
+}
+
+/* языки */
+
+.lang-switcher{
+display:flex;
+gap:8px;
+}
+
+.lang-btn{
+background:#1c252c;
+border:none;
+color:white;
+padding:7px 12px;
+border-radius:4px;
+cursor:pointer;
+font-size:13px;
+transition:0.2s;
+}
+
+.lang-btn:hover{
+background:#00bcd4;
+}
+
+.lang-btn.active{
+background:#00d1ff;
+color:#000;
+}
+
+/* ===== MAIN ===== */
+
+.site-main{
+flex:1;
+max-width:1200px;
+width:100%;
+margin:auto;
+padding:50px 20px;
+}
+
+.content-area{
+min-height:400px;
+}
+
+.loading-state{
+text-align:center;
+opacity:0.7;
+font-size:18px;
+padding:80px 0;
+}
+
+/* ===== секции ===== */
+
+.section{
+margin-bottom:80px;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:20px;
+font-weight:600;
+}
+
+.section-text{
+font-size:18px;
+max-width:800px;
+opacity:0.9;
+}
+
+/* ===== видео ===== */
+
+.video-container{
+margin-top:40px;
+width:100%;
+max-width:900px;
+}
+
+.video-container iframe{
+width:100%;
+height:500px;
+border:none;
+border-radius:6px;
+}
+
+/* ===== кнопка PDF ===== */
+
+.download-btn{
+display:inline-block;
+margin-top:35px;
+padding:16px 30px;
+background:#00d1ff;
+color:black;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+font-size:16px;
+transition:0.2s;
+}
+
+.download-btn:hover{
+background:#00a8cc;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer{
+background:#0f151a;
+border-top:1px solid #1d262e;
+}
+
+.footer-inner{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.footer-block{
+max-width:260px;
+}
+
+.footer-title{
+font-size:16px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.footer-text{
+font-size:14px;
+opacity:0.7;
+}
+
+.footer-link{
+display:block;
+margin-top:4px;
+color:#00d1ff;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-link:hover{
+text-decoration:underline;
+}
+
+.footer-copy{
+margin-top:10px;
+font-size:13px;
+opacity:0.5;
+}
+
+/* ========================= */
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
+/* ========================= */
+
+@media (max-width:768px){
+
+.header-inner{
+flex-direction:column;
+gap:15px;
+}
+
+.brand-text{
+font-size:18px;
+}
+
+.site-main{
+padding:35px 18px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.section-text{
+font-size:16px;
+}
+
+.video-container iframe{
+height:260px;
+}
+
+.download-btn{
+width:100%;
+text-align:center;
+}
+
+.footer-inner{
+flex-direction:column;
+gap:30px;
+}
+
+}
