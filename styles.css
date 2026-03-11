@@ -130,12 +130,12 @@ opacity:0.9;
 display: flex;
 gap: 20px;
 overflow-x: auto;
-padding: 10px 0;
+padding: 15px 0;
 scroll-snap-type: x mandatory;
 }
 
 .image-gallery img {
-height: 420px;
+height: 360px;
 border-radius: 12px;
 object-fit: cover;
 scroll-snap-align: start;
