@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Почему ВКО | BigChanger</title>
+  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/?lang=ru" class="brand">
+          <div class="brand-mark">
+            <img src="logo.png" alt="BigChanger logo" />
+          </div>
+          <div class="brand-text">BigChanger</div>
+        </a>
+
+        <nav class="lang-switcher" aria-label="Language switcher">
+          <a href="/why-east-kz-ru.html" class="lang-btn active">RU</a>
+          <a href="/why-east-kz-kz.html" class="lang-btn">KZ</a>
+          <a href="/why-east-kz-en.html" class="lang-btn">EN</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="content-area">
+        <div class="section">
+          <h1 class="section-title">Почему именно Восточно-Казахстанская область</h1>
+
+          <p class="section-text">
+            Локация проекта BigChanger HoloCinema Dome выбрана не случайно.
+            Восточно-Казахстанская область даёт не просто территорию под строительство,
+            а природную, туристическую и визуальную среду, которая усиливает саму идею проекта.
+          </p>
+
+          <p class="section-text">
+            Здесь леса, реки, горные горизонты, простор и ощущение отдельной точки назначения.
+            Именно такая среда позволяет создать не просто объект, а полноценный туристический комплекс,
+            куда люди будут приезжать не на один вечер, а на несколько дней.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Галерея локации</h2>
+
+          <div class="vko-gallery">
+            <div class="vko-slide active">
+              <img src="photo/1.jpg" alt="ВКО фото 1" />
+              <div class="vko-caption">
+                <h3>Природная энергия региона</h3>
+                <p>
+                  Горные реки и живая природная динамика формируют сильный визуальный образ территории
+                  и усиливают туристическую ценность места.
+                </p>
+              </div>
+            </div>
+
+            <div class="vko-slide">
+              <img src="photo/2.jpg" alt="ВКО фото 2" />
+              <div class="vko-caption">
+                <h3>Лес, тишина и глубина пространства</h3>
+                <p>
+                  Лесная среда создаёт ощущение уединения, спокойствия и премиального отдыха,
+                  которого невозможно добиться в плотной городской застройке.
+                </p>
+              </div>
+            </div>
+
+            <div class="vko-slide">
+              <img src="photo/3.jpg" alt="ВКО фото 3" />
+              <div class="vko-caption">
+                <h3>Эмоциональная ценность поездки</h3>
+                <p>
+                  Закаты, открытые поля и живая природа делают поездку не просто посещением объекта,
+                  а полноценным впечатлением и частью туристического опыта.
+                </p>
+              </div>
+            </div>
+
+            <div class="vko-slide">
+              <img src="photo/4.jpg" alt="ВКО фото 4" />
+              <div class="vko-caption">
+                <h3>Масштаб и открытые горизонты</h3>
+                <p>
+                  Просторные панорамы и природный ландшафт дают проекту масштаб,
+                  необходимый для формирования точки притяжения международного уровня.
+                </p>
+              </div>
+            </div>
+
+            <div class="vko-slide">
+              <img src="photo/5.jpg" alt="ВКО фото 5" />
+              <div class="vko-caption">
+                <h3>Доступность без городского перегруза</h3>
+                <p>
+                  Дороги и существующая среда позволяют развивать туристическую инфраструктуру,
+                  сохраняя главный плюс региона — ощущение природы, воздуха и свободы.
+                </p>
+              </div>
+            </div>
+
+            <div class="vko-slide">
+              <img src="photo/6.jpg" alt="ВКО фото 6" />
+              <div class="vko-caption">
+                <h3>Инфраструктурный и туристический потенциал</h3>
+                <p>
+                  Реальные объекты, маршруты и транспортный контекст показывают,
+                  что регион не является абстрактной точкой на карте, а уже имеет основу для дальнейшего роста.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="vko-controls">
+            <button class="vko-control-btn" type="button" onclick="prevSlide()">← Назад</button>
+            <button class="vko-control-btn" type="button" onclick="nextSlide()">Вперёд →</button>
+          </div>
+
+          <div class="vko-dots">
+            <button class="vko-dot active" onclick="showSlide(0)"></button>
+            <button class="vko-dot" onclick="showSlide(1)"></button>
+            <button class="vko-dot" onclick="showSlide(2)"></button>
+            <button class="vko-dot" onclick="showSlide(3)"></button>
+            <button class="vko-dot" onclick="showSlide(4)"></button>
+            <button class="vko-dot" onclick="showSlide(5)"></button>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Почему это усиливает BigChanger</h2>
+
+          <p class="section-text">
+            BigChanger HoloCinema Dome задуман не как городской развлекательный объект,
+            а как отдельная точка назначения. Для такого формата важны природа, простор,
+            визуальная среда, длительность пребывания гостей и возможность совмещать технологии,
+            отдых, туризм и события в одном месте.
+          </p>
+
+          <p class="section-text">
+            Восточно-Казахстанская область даёт проекту именно этот контекст:
+            сильную природную идентичность, туристический потенциал и пространство для масштабного развития.
+          </p>
+
+          <a href="/?lang=ru" class="download-btn">Вернуться на главную</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-block">
+          <div class="footer-title">BigChanger</div>
+          <div class="footer-text">Immersive technology, tourism and media development project.</div>
+        </div>
+
+        <div class="footer-block">
+          <div class="footer-title">Contact</div>
+          <a class="footer-link" href="mailto:info@bigchanger.org">info@bigchanger.org</a>
+          <a class="footer-link" href="tel:+77713505701">+77713505701</a>
+        </div>
+
+        <div class="footer-block">
+          <div class="footer-title">Website</div>
+          <a class="footer-link" href="https://bigchanger.org" target="_blank" rel="noopener noreferrer">bigchanger.org</a>
+          <div class="footer-copy">© 2026 BigChanger</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.vko-slide');
+    const dots = document.querySelectorAll('.vko-dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      let next = currentSlide + 1;
+      if (next >= slides.length) next = 0;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      let prev = currentSlide - 1;
+      if (prev < 0) prev = slides.length - 1;
+      showSlide(prev);
+    }
+  </script>
+</body>
+</html>
