@@ -71,21 +71,7 @@
       }
     };
 
-function updateVkoLink(lang) {
-  const link = document.getElementById('vko-link');
-  if (!link) return;
 
-  if (lang === 'ru') {
-    link.href = '/why-east-kz-ru.html';
-    link.textContent = 'Почему ВКО';
-  } else if (lang === 'kz') {
-    link.href = '/why-east-kz-kz.html';
-    link.textContent = 'Неге ШҚО';
-  } else {
-    link.href = '/why-east-kz-en.html';
-    link.textContent = 'Why East Kazakhstan';
-  }
-}
     const contentEl = document.getElementById('content');
     const langButtons = document.querySelectorAll('.lang-btn');
     function updateBrandLink(lang) {
@@ -122,7 +108,21 @@ function updateVkoLink(lang) {
         `;
       }
     }
+function updateVkoLink(lang) {
+  const link = document.getElementById('vko-link');
+  if (!link) return;
 
+  if (lang === 'ru') {
+    link.href = '/why-east-kz-ru.html';
+    link.textContent = 'Почему ВКО';
+  } else if (lang === 'kz') {
+    link.href = '/why-east-kz-kz.html';
+    link.textContent = 'Неге ШҚО';
+  } else {
+    link.href = '/why-east-kz-en.html';
+    link.textContent = 'Why East Kazakhstan';
+  }
+}
     langButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         loadLanguage(btn.dataset.lang);
