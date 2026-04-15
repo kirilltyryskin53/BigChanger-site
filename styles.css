@@ -77,6 +77,9 @@ letter-spacing:1px;
 
   transition: all 0.2s ease;
 }
+.vko-btn {
+  box-shadow: 0 0 10px rgba(0, 224, 211, 0.3);
+}
 .vko-btn:hover {
   background: rgba(0, 224, 211, 0.15);
   border-color: #00e0d3;
