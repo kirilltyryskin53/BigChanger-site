@@ -17,12 +17,13 @@
           </div>
           <div class="brand-text">BigChanger</div>
         </a>
+
         <nav class="lang-switcher" aria-label="Language switcher">
-            <a href="#" class="vko-btn" id="vko-link">Why East Kazakhstan</a>
-            <h> </h>
-            <button type="button" class="lang-btn active" data-lang="ru">RU</button>
-            <button type="button" class="lang-btn" data-lang="kz">KZ</button>
-            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <a href="#" class="vko-btn" id="vko-link">Why East Kazakhstan</a>
+
+          <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+          <button type="button" class="lang-btn" data-lang="kz">KZ</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
         </nav>
       </div>
     </header>
@@ -71,14 +72,31 @@
       }
     };
 
-
     const contentEl = document.getElementById('content');
     const langButtons = document.querySelectorAll('.lang-btn');
+
     function updateBrandLink(lang) {
-     const brandLink = document.getElementById('brand-link');
+      const brandLink = document.getElementById('brand-link');
       if (!brandLink) return;
       brandLink.href = `/?lang=${lang}`;
     }
+
+    function updateVkoLink(lang) {
+      const link = document.getElementById('vko-link');
+      if (!link) return;
+
+      if (lang === 'ru') {
+        link.href = '/why-east-kz-ru.html';
+        link.textContent = 'Почему ВКО';
+      } else if (lang === 'kz') {
+        link.href = '/why-east-kz-kz.html';
+        link.textContent = 'Неге ШҚО';
+      } else {
+        link.href = '/why-east-kz-en.html';
+        link.textContent = 'Why East Kazakhstan';
+      }
+    }
+
     function setActiveLangButton(lang) {
       langButtons.forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -87,7 +105,7 @@
 
     async function loadLanguage(lang) {
       const config = supportedLangs[lang] || supportedLangs.ru;
-      updateVkoButton(lang);
+
       try {
         const response = await fetch(config.file, { cache: 'no-cache' });
         if (!response.ok) throw new Error('Content load failed');
@@ -97,8 +115,9 @@
 
         document.documentElement.lang = config.htmlLang;
         localStorage.setItem('siteLang', lang);
+
         updateBrandLink(lang);
-        updateVkoButton(lang);
+        updateVkoLink(lang);
         setActiveLangButton(lang);
       } catch (error) {
         contentEl.innerHTML = `
@@ -108,29 +127,19 @@
         `;
       }
     }
-function updateVkoLink(lang) {
-  const link = document.getElementById('vko-link');
-  if (!link) return;
 
-  if (lang === 'ru') {
-    link.href = '/why-east-kz-ru.html';
-    link.textContent = 'Почему ВКО';
-  } else if (lang === 'kz') {
-    link.href = '/why-east-kz-kz.html';
-    link.textContent = 'Неге ШҚО';
-  } else {
-    link.href = '/why-east-kz-en.html';
-    link.textContent = 'Why East Kazakhstan';
-  }
-}
     langButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         loadLanguage(btn.dataset.lang);
       });
     });
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const langFromUrl = urlParams.get('lang');
     const savedLang = localStorage.getItem('siteLang') || 'ru';
-    loadLanguage(savedLang);
+    const initialLang = supportedLangs[langFromUrl] ? langFromUrl : savedLang;
+
+    loadLanguage(initialLang);
   </script>
 </body>
 </html>
