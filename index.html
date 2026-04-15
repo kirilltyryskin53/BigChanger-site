@@ -17,11 +17,11 @@
           </div>
           <div class="brand-text">BigChanger</div>
         </a>
-
         <nav class="lang-switcher" aria-label="Language switcher">
-          <button type="button" class="lang-btn active" data-lang="ru">RU</button>
-          <button type="button" class="lang-btn" data-lang="kz">KZ</button>
-          <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <a href="why-east-kz.html" class="vko-btn">Why East Kazakhstan</a>
+            <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+            <button type="button" class="lang-btn" data-lang="kz">KZ</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
         </nav>
       </div>
     </header>
@@ -69,7 +69,16 @@
         htmlLang: 'en'
       }
     };
+function updateVkoButton(lang) {
+  const btn = document.querySelector('.vko-btn');
 
+  if (!btn) return;
+
+  if (lang === 'ru') btn.textContent = 'Почему ВКО';
+  else if (lang === 'kz') btn.textContent = 'Неге ШҚО';
+  else btn.textContent = 'Why East Kazakhstan';
+}
+    
     const contentEl = document.getElementById('content');
     const langButtons = document.querySelectorAll('.lang-btn');
 
@@ -81,7 +90,7 @@
 
     async function loadLanguage(lang) {
       const config = supportedLangs[lang] || supportedLangs.ru;
-
+      updateVkoButton(lang);
       try {
         const response = await fetch(config.file, { cache: 'no-cache' });
         if (!response.ok) throw new Error('Content load failed');
