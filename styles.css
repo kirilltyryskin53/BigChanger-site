@@ -61,6 +61,28 @@ letter-spacing:1px;
 
 /* языки */
 
+.vko-btn {
+  margin-right: 12px;
+  padding: 8px 14px;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #00e0d3;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+  border: 1px solid rgba(0, 224, 211, 0.4);
+
+  transition: all 0.2s ease;
+}
+.vko-btn:hover {
+  background: rgba(0, 224, 211, 0.15);
+  border-color: #00e0d3;
+  transform: translateY(-1px);
+}
+
 .lang-switcher{
 display:flex;
 gap:8px;
